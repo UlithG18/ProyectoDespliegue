@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using ProyectoDespliegue.Data;
-using ProyectoDespliegue.Models;
+using ProyectoDespliegueUlith.Data;
+using ProyectoDespliegueUlith.Models;
 
-namespace ProyectoDespliegue.Controllers;
+namespace ProyectoDespliegueUlith.Controllers;
 
 public class UserController : Controller
 {
@@ -19,10 +19,11 @@ public class UserController : Controller
         return View(users);
     }
 
-    public IActionResult Create()
+    public IActionResult Create(User user)
     {
-        
-        return View();
+        _context.users.Add(user);
+        _context.SaveChanges();
+        return RedirectToAction("Index");
     }
 
     public IActionResult Show(int id)

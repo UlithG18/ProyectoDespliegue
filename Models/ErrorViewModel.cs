@@ -1,4 +1,4 @@
-namespace ProyectoDespliegue.Models;
+namespace ProyectoDespliegueUlith.Models;
 
 public class ErrorViewModel
 {

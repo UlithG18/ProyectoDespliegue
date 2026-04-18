@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using ProyectoDespliegue.Models;
+using ProyectoDespliegueUlith.Models;
 
-namespace ProyectoDespliegue.Data;
+namespace ProyectoDespliegueUlith.Data;
 
 public class MysqlDbContext : DbContext
 {

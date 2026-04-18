@@ -1,21 +1,24 @@
+@model ProyectoDespliegue.Models.User
+
 <div class="row">
     <div class="col-md-4 offset-md-4">
         <div class="card">
             <div class="card-body">
-                <form action="">
+                <form asp-action="Create" asp-controller="User" method="post">
+                    <input type="hidden" asp-for="Id">
                     <div class="mt-4">
                         <label for="">Nombres</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" asp-for="Name">
                     </div>
                     <div class="mt-4">
                         <label for="">Correo</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" asp-for="Email">
                     </div>
                     <div class="mt-4">
                         <label for="">Password</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" asp-for="Password">
                     </div>
-                    <button class="btn btn-primary">Enviar</button>
+                    <button class="btn btn-primary">Crear</button>
                 </form>
             </div>
         </div>
